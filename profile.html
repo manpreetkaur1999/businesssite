@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<title>profile</title>
+		<link rel="stylesheet" href="style/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline" rel="stylesheet">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<link href="https://fonts.googleapis.com/css?family=Poppins|Oswald" rel="stylesheet">
+	</head>
+	<body>
+	<div id="profile-page">
+	<div id="profile-bg">
+		<div id="pic-upload">
+			<center>
+			<img src="../images/logo.png" id="logo">
+			<h1 id="app-name">SAFE_DOC</h1>
+			</center>
+	
+			<div id="upload-btn">
+				<i class="fa fa-upload" id="upload-icon">Upload pic</i>
+				<input type="file" accept="image/*" id="profile-pic-upload" onchange="upload_pic()">
+			</div>
+
+			<h1 id="welcome"></h1>
+			<i class="fa fa-forward" id="next-icon" style="display:none"></i>
+			</div>
+		</div>
+
+	<div id="app-content">
+
+		<header>
+			<h1 id="profile-name"></h1>
+			<div id="profile-pic"></div>
+			<ul id="app-menu">
+				<li><a href="pages/business.html"><i class="fa fa-briefcase" style="font-size:30px;color:black"></i><br> Bussiness</a></li>
+				<li><a href="#"><i class="fa fa-pencil" style="font-size:30px;color:black"></i><br> About Me</a></li>
+				<li><a href="pages/contact.html"><i class="fa fa-phone" style="font-size:30px;color:black"></i><br> Contacts</a></li>
+				<li><a href="pages/playlist.html"><i class="fa fa-play" style="font-size:30px;color:black"></i><br> Playlist</a></li>
+				<li onclick="logout()"><a href="#"><i class="fa fa-sign-out" style="font-size:30px;color:black"></i><br> Logout</a></li>
+			</ul>
+		</header>
+		<footer>
+			<div>
+			<img src="../images/logo.png" width="50">
+			<h4>SAFE_DOC</h4>
+			<h1 id="profile-notice">Please wait...</h1>
+			</div>
+		</footer>
+
+	</div>
+
+
+
+	</div>
+	<script src="script/welcome_up.js"></script>
+	</body>
+</html>

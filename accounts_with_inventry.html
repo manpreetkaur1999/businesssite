@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="style/accounts_with_inventry.css">
+	<link rel="stylesheet" href="style/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Homepage</title>
+	<noscript>
+		<h1>Please enable JavaScript</h1>
+		<style>
+		body{
+			background:black;
+		}
+
+		h1{
+			font-size: 100px;
+			text-align:center;
+			color:white;
+			font-family:sans-serif;
+		}
+
+		#webpage{display:none;}
+		</style>
+	</noscript>
+
+</head>
+<body>
+<div id="webpage">
+				<header class = "remove">
+				<img src="../../../images/triangle.png" width="130">
+				<div id="pic-box"></div>
+				</header>
+				<h1 align="center" id="app-name" class = "remove">Business Management System</h1>
+			<p id="tag-line" class = "remove">Manage your all business details like ledger, voucher, tax, balance sheet and many more<br>
+				<font color="blue"><b>Business mode : accounts with inventry</b></font>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<b><span id="date"></span> | <span id="time"></span></b></p>
+
+	<div id="app-box">
+		<ul>
+			<li><a href="pages/ledger.html">Ledger</a></li>
+			<li id="unit-of-measure">Unit of measure</li>
+			<li><a href="pages/voucher.html">Voucher</a></li>
+			<li>Stocks</li>
+			<div id="cmp-logo"></div>			
+			<li>Profit & loss</li>
+			<li>Balance sheet</li>
+			<li>Transactions</li>
+			<li id="exit">Exit</li>
+		</ul>
+		<div id="cmp-name">
+			
+		</div>
+
+	</div>
+</div>
+<iframe style="width:300px;height:285px;position: absolute;top:50%;background:white;left:50%;transform: translate(-50%,-50%);box-shadow:0px 0px 10px grey;border:none;display:none" id="frame" scrolling="no">
+	</iframe>
+<script src="script/accounts_with_inventry/ac_with_inventry.js"></script>
+<script src="script/accounts_with_inventry/update_profile.js"></script>
+</body>
+</html>

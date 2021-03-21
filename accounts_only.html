@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="style/accounts_only.css">
+	<link rel="stylesheet" href="style/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Homepage</title>
+	<noscript>
+		<h1>Please enable JavaScript</h1>
+		<style>
+		body{
+			background:black;
+		}
+
+		h1{
+			font-size: 100px;
+			text-align:center;
+			color:white;
+			font-family:sans-serif;
+		}
+
+		#webpage{display:none;}
+		</style>
+	</noscript>
+
+</head>
+<body>
+	<div id="webpage">
+			<header class = "remove">
+				<img src="../../../images/triangle.png" width="130">
+				<div id="pic-box"></div>
+			</header>
+
+			<h1 align="center" id="app-name" class = "remove">Business Management System</h1>
+			<p id="tag-line" class = "remove">Manage your all business details like ledger, voucher, tax, balance sheet and many more</p>
+
+			<div id="app-design" class = "remove">
+				<div id="brand"></div>
+				<div id="brand-name">
+					
+				</div>
+				
+				<div id="option-box">
+
+
+					<button id="unit-of-measure">
+						<div id="primary-content">
+						<i class="fa fa-balance-scale" style="font-size:25px;float:left"></i> &nbspUnit of measure
+						</div>
+
+						<div id="secondary-content" align="left">
+							<form id="unit-form">
+
+								<i class="fa fa-close" style="float:right" id="close-icon"></i>
+								<input type="text" placeholder="Symbol" required="required">
+								<input type="text" placeholder="Formal name" required="required">
+								<input type="submit" value="Set">
+								<i class="fa fa-trash" id="unit-del" style="display:none"></i>
+
+							</form>
+							<span id="select-measure-text" style="display:none">Edit unit of measure</span>
+							<select id="select-measure" style="padding:10px;margin-top:8px;width:100%;display:none">
+								<option>Unit of measure</option>
+							</select>
+						</div>
+					</button>
+
+
+<button id="tax-btn"><i class="fa fa-calculator" style="font-size:25px;float:left" id="tax-icon">
+	
+
+</i> &nbsp<span id="tax-link">Tax setup</span><br><br><br>
+	<form id="tax-form">
+		<input type="text" name="tax-name" id="tax-name" placeholder="Tax name" required="required"><br>
+		<input type="text" name="tax" id="tax" placeholder="2%" required="required"><br>
+		<input type="submit" value="Done" id="tax-submit">
+	</form>
+</button>
+
+					<button id="sales-btn"><i class="fa fa-money" style="font-size:25px;float:left"></i> &nbspSales voucher</button>
+
+					<button id="shut-cmp"><i class="fa fa-window-close" style="font-size:25px;float:left"></i> &nbspShut company</button>
+
+				</div>
+			</div>
+
+
+
+	</div>
+	<!-- start sales voucher -->
+		<div id="sales-voucher"  style="font-family:Ubuntu">
+			<table width="100%">
+				<tr>
+					<td>
+						<button id="delete-voucher" style="padding:8px;background:white;font-weight:bold;border:1px solid #d4d4d4;margin-bottom:5px;font-size:15px;box-shadow:0px 0px 3px #ddd;float:left;display: none;"><i class="fa fa-trash"></i> Delete voucher</button>
+
+						<button id="voucher-close" style="padding:8px;background:white;font-weight:bold;border:1px solid #d4d4d4;margin-bottom:5px;font-size:15px;box-shadow:0px 0px 3px #ddd;float:right"><i class="fa fa-close"></i> close invoice</button></td>
+				</tr>
+			</table>
+			<table width="100%" style="margin-bottom:1px;background:black;color:white" id="voucher-no-table">
+				<tr>
+					<td width="150" id="voucher-no"></td>
+					<td align="right" id="date">Date : </td>
+					
+				
+					
+				</tr>
+			</table>
+
+			<table width="100%" border="1">
+				<tr>
+					<td id="voucher-details"></td>
+					<td id="voucher-logo" width="130">
+						<img id="cmp-pic" width="100">
+					</td>
+				</tr>
+			</table>
+			<form id="buyer-form" autocomplete="off">
+				<br>
+			Name<br>
+			<input type="text" name="name" id="name" style="width:100%;padding:10px;border-radius:4px;border:1px solid #d4d4d4;margin-top:2px">
+			<br><br>
+			Email<br>
+			<input type="email" name="email" id="email" style="width:100%;padding:10px;border-radius:4px;border:1px solid #d4d4d4;margin-top:2px">
+			<br><br>
+			Address<br>
+			<input type="text" name="address" id="address" style="width:100%;padding:10px;border-radius:4px;border:1px solid #d4d4d4;margin-top:2px">
+			<br><br>
+			Phone<br>
+			<input type="number" name="phone" id="phone" style="width:100%;padding:10px;border-radius:4px;border:1px solid #d4d4d4;margin-top:2px">
+			</form>
+			<br>
+			<br>
+			<table id="product-table">
+			<tr>
+			<td>Description</td>
+			<td>Price</td>
+			<td>Qty</td>
+			<td>Unit</td>
+			<td>Amount</td>
+			<td>Del</td>
+			</tr>
+			</table>
+
+			<br>
+
+			<button  id="add-product" style="padding:8px;background:white;border:1px solid #323232;font-size:15px;font-weight:bold;cursor:pointer">
+			<i class="fa fa-plus-square" style=""></i>
+			Add item
+			</button>
+			<br>
+			<table width="100%" id="calc-table" style="border:1px solid black;margin-top:20px;text-align: right">
+			<tr>
+			<td width="50%"></td>
+			<td>Subtotal</td>
+			<td id="subtotal"><i class="fa fa-rupee"></i> 0.00</td>
+			</tr>
+			<tr>
+			<td rowspan="4"></td>
+			<td id="tax-col" style="line-height:35px"></td>
+			<td id="tax-calculation" style="line-height:35px"></td>
+			</tr>
+			<tr>
+		
+			<td>Total</td>
+			<td id="total"><i class="fa fa-rupee"></i> 0.00</td>
+			</tr>
+			<tr>
+			
+			<td><b>Paid</b></td>
+			<td><b><i class="fa fa-rupee"></i> <input type="number" style="width:150px;padding:6px" placeholder="Amount" id="paid" style="text-align:right"></b></td>
+			</tr>
+
+			<tr>
+			
+			<td><b>Balance Dues</b></td>
+			<td id="dues"><b><i class="fa fa-rupee"></i> 0.00</b></td>
+			</tr>
+
+			<tr>
+			<td colspan="3" align="right"><button id="get-bill" style="display: none">Get bill !</button></td>
+			</tr>
+			</table>
+		</div>
+
+		<div id="manage-section" class="remove">
+			<div id="voucher-section">
+			<h1>Manage voucher</h1>
+			<input type="number" placeholder="&#xf00e; Enter voucher no" id="search-voucher">
+			</div>
+
+			<div id="tax-section" style="display: none">
+			<h1>Manage Taxes</h1>
+			<select id="select-tax">
+				<option>Select tax</option>
+
+			</select>
+		</div>
+		</div>
+
+	<!-- end sales voucher -->
+	<script src="script/accounts_only.js"></script>
+</body>
+</html>

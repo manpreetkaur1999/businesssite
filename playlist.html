@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<link rel="stylesheet" href="style/playlist.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil|Mukta" rel="stylesheet">
+		<title>playlist</title>
+	</head>
+	<body>
+
+<div id="player-con">
+
+		  <div id="player-header">
+				<h1 id="show"></h1>
+				<i class="fa fa-share" title="Share" id="shareBtn"></i>
+				<i class="fa fa-thumbs-o-down" title="Dislike"></i>
+				<i class="fa fa-thumbs-o-up" title="Like"></i>
+			</div>
+
+
+			<video id="video-player">
+				<source s  id="player-src"></source>
+			</video>
+              <input type="file" accept="video/*" id="upload-video">
+
+			<div id="playlist">
+		    <div id="playlist-header">Favorite Songs <i class="fa fa-plus-circle" title="Add to playlist" style="position: relative;">
+					<input type="file" accept="video/*" id="add-icon">
+				</i></div>
+			</div>
+         	
+         	<div id="controls">
+				
+				<i class="fa fa-stop-circle" title="Stop" id="stop-icon"></i>			
+				<i class="fa fa-backward" title="Prev" id="prev-icon"></i>
+				<i class="fa fa-play" title="Play" id="play-icon"></i>
+				<i class="fa fa-forward" title="Next" id="next-icon"></i>
+				<i class="fa fa-repeat" title="Replay" id="replay-icon"></i>
+
+				<div id="progress-bar">
+					<div id="buffer-progress"></div>
+					<div id="progress"></div>
+
+				</div>
+				<div id="setting-con">
+					<div id="setting-app">
+						<p>Speed : <span id="show-speed">1</span> <button id="reset-speed">Reset</button></p>
+						<input type="range" min="0" max="10" step="0.1" id="speed-slider" value="1">
+						<ul>
+							<li id="miniplayer-icon"><i class="fa fa-clone"></i>Mini player</li>
+							<li>
+									<input type="color" id="container-theme">
+									&nbsp;Container theme
+							</li>
+
+							<li>
+									<input type="color" id="icon-theme">
+									&nbsp;Icon theme
+							</li>
+
+							<li>
+									<input type="color" id="text-theme">
+									&nbsp;Text theme
+							</li>
+						</ul>
+						<button id="reset-themes">Reset themes</button>
+					</div>
+				<i class="fa fa-gear" title="Setting" id="setting"></i>
+				</div>
+				<div id="volume-bar">
+				<i class="fa fa-volume-up home" title="Volume" id="volume-icon"></i>
+				<input type="range" min="0" max="1" step="0.1" id="volume-slider" style="display:none;">
+				</div>
+
+				<i class="fa fa-download" style="font-size:28px" id="download-icon" title="Download -"></i>
+				<i class="fa fa-arrows-alt" title="Fullscreen" style="font-size:25px" id="fullscreen"></i>
+			</div>
+
+       </div>
+
+       <div id="miniplayer">
+			<h2>Ch-1 intro to html</h2>
+			<i class="fa fa-clone" id="close-icon"></i>
+
+			<video id="mini-video-player">
+				<source id="minivideo-source"></source>
+			</video>
+		</div>
+		<h1 id="result"></h1>
+
+
+
+
+
+
+
+		<script src="script/playlist.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="../style/ledger.css">
+	<link rel="stylesheet" href="../style/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Fascinate+Inline|Ubuntu" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Homepage</title>
+	<noscript>
+		<h1>Please enable JavaScript</h1>
+		<style>
+		body{
+			background:black;
+			}
+
+			h1{
+			font-size: 100px;
+			text-align:center;
+			color:white;
+			font-family:sans-serif;
+			}
+
+		#webpage{display:none;}
+		</style>
+	</noscript>
+
+</head>
+<body>
+<div id="webpage">
+					<header class = "remove">
+				<img src="../../../../images/triangle.png" width="130">
+				<div id="pic-box"></div>
+				</header>
+				<h1 align="center" id="app-name" class = "remove">Business Management System</h1>
+			<p id="tag-line" class = "remove">Manage your all business details like ledger, voucher, tax, balance sheet and many more<br>
+				<font color="blue"><b>Business mode : accounts with inventry</b></font>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;<b><span id="date"></span> | <span id="time"></span></b></p>
+
+				
+				<div id="app-box">
+					<fieldset>
+						<legend>Ledger option</legend>
+						<div id="tab-list">
+							<button id="default">Create</button>
+							<button id="edit-btn">Edit</button>
+							<button>Search</button>
+							<div id="cmp-logo">
+							</div>
+							<div id="cmp-name">
+
+							</div>
+
+						</div>
+						<div id="tab-content">
+							<div class="open" id="create">
+								<form id="create-form">
+									<table width="100%">
+
+										<tr>
+											<td width="200"> 
+
+												<button id="ledger-no">1</button> Ledger name<sup style="font-weight: bold;color:red">*</sup><br>
+												<input type="text" name="ledger name" id="ledger-name" placeholder="Ledger name" required="required">
+											</td>
+											<td align="right">
+												<b>Total opening balance</b><br>
+												<span id="debit"></span><br>
+												<span id="credit"></span><br>
+												<hr width="200" align="right" size="1">
+												<b>Differences</b> : <span id="dif"></span>
+											</td>
+										</tr>
+									</table>
+									<table width="100%">
+										<tr>
+											<td width="200">
+												Under<sup style="font-weight: bold;color:red">*</sup> <br>
+												<select id="group">
+													<option>Select group</option>
+													<option>Capital account</option>
+													<option>Sales account</option>
+													<option>Purchase account</option>
+													<option>Sundry creditors</option>
+													<option>Sundry debitors</option>
+												</select>
+												<br><br>
+												
+												Opening balance<sup style="font-weight: bold;color:red">*</sup>
+												<br>
+
+												<input type="number" name="balance" id="balance" placeholder="00.00" required="required">
+												<br>
+												Mode<sup style="font-weight: bold;color:red">*</sup>
+												<input type="text" name=-"mode" id="mode" placeholder="Cr">
+											</td>
+											<td>
+												<center>Mailing details</center>
+											
+												Name<br>
+												<input type="text" name="ledger name" id="mailing-name" placeholder="Ledger name">
+												<br>
+												Address<br>
+												<textarea rows="5" name="address" id="address"></textarea>
+												
+											</td>
+										</tr>
+									</table>
+									<table width="100%">
+									</tr>
+											<td>
+												<button type="submit" style="padding:12px;float:right;border:none;background:blue;color:white">Create now !</button>
+											</td>
+									</tr>
+									</table>
+									
+
+								</form>
+							</div>
+
+							<div class="open" id="edit">
+								<table width="100%">
+									<tr>
+										<td>
+											
+												Search and edit<br>
+												<input type="number" placeholder="Enter ledger no" id="edit-ledger">
+											
+										</td>
+									</tr>
+								</table>
+								<table width="100%" height="340">
+									<tr>
+										<td style="font-family:Ubuntu;">
+											<p id="ledger-notice"></p>
+											<table id="edit-table" style="margin-top:-50px;display:none">
+												<tr>
+													<td width="160" bgcolor="blue" style="color:white">Ledger no </td>
+													<td id="edit-lno"></td>
+												</tr>
+
+												<tr>
+													<td width="160" bgcolor="blue" style="color:white">Ledger name  </td>
+													<td id="edit-lname"></td>
+												</tr>
+											<tr>
+											<td width="160" bgcolor="blue" style="color:white">Group  </td>
+											<td>			
+											<select id="select-group" style="padding:5px;display:none;border:1px dashed blue">
+												<option>Capital account</option>
+												<option>Sales account</option>
+												<option>Purchase account</option>
+												<option>Sundry creditors</option>
+												<option>Sundry debitors</option>
+											</select>
+											</td>
+												</tr>
+												<tr>
+													<td width="160" bgcolor="blue" style="color:white">Opening balance  </td>
+													<td id="edit-balance"></td>
+												</tr>
+												<tr>
+													<td width="160" bgcolor="blue" style="color:white">Mailing name  </td>
+													<td id="edit-mname"></td>
+												</tr>
+												<tr>
+													<td width="160" bgcolor="blue" style="color:white">Address  </td>
+													<td id="edit-address"></td>
+												</tr>
+
+												<tr>
+													<td width="160"><button id="save" class="fa fa-save"> Save</button></td>
+													<td><button id="delete" class="fa fa-trash"> Delete</button></td>
+												</tr>
+
+											</table>
+
+											
+										</td>
+									</tr>
+								</table>
+							</div>
+
+							<div class="open" id="search">
+								<table width="100%">
+									<tr>
+										<td>
+											
+												Search ledgers<br>
+												<input type="search" placeholder="Enter ledger no" id="search-field">
+											
+										</td>
+									</tr>
+								</table>
+								<table width="100%" height="340">
+									<tr>
+										<td>
+											<p id="search-notice"></p>
+											<table style="font-family:Ubuntu;display: none" id="search-table">
+												<tr>
+													<td style="background:black;color:white">Ledger no  </td>
+													<td id="s-ln"></td>
+												</tr>
+
+						
+
+												
+
+												<tr>
+													<td width="160" style="background:black;color:white">Ledger name  </td>
+													<td id="s-lname"></td>
+												</tr>
+
+												<tr>
+													<td width="160" style="background:black;color:white">Group : </td>
+													<td id="s-group"></td>
+												</tr>
+
+												<tr>
+													<td width="160" style="background:black;color:white">Mailing name  </td>
+													<td id="s-mname"></td>
+												</tr>
+
+												<tr>
+													<td width="160" style="background:black;color:white">Address  </td>
+													<td id="s-address"></td>
+												</tr>
+												<tr>
+													<td width="160" style="background:black;color:white">Opening balance  </td>
+													<td id="s-balance"></td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</table>
+							</div>
+
+						</div>
+					</fieldset>
+				</div>
+
+</div>
+<script src="../script/accounts_with_inventry/ledger.js"></script>
+<script src="../script/accounts_with_inventry/update_profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+@charset "utf-8";
+
+	*{
+		box-sizing: border-box;
+	}
+	
+	body{
+		padding:0;
+		margin:0;
+	}
+
+	header{
+		position: fixed;
+		top:0;
+		left:0;
+	}
+	
+	#pic-box{
+	width:100px;
+	height:100px;
+	border:2px solid white;
+	background-color:white;
+	box-shadow:0px 0px 5px grey;
+	position: fixed;
+	border-radius:50%;
+	left:10px;
+	top:10px;
+	}
+
+	#app-name{
+		font-family:"Ubuntu",sans-serif;
+		font-size:35px;
+		
+	}
+
+	#tag-line{
+		font-size:20px;
+		text-align:center;
+		font-family:cursive;
+		margin-top:-20px;
+	}
+
+	#app-box fieldset{
+		border:2px solid blue;
+		position: relative;
+		width:80%;
+		left:10%;
+		right:10%;
+		top:50px;
+		padding-left:20px;
+		box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+		height:500px
+	}
+
+	#app-box fieldset legend{
+		width:200px;
+		font-family:"Ubuntu",sans-serif;
+		font-size:20px;
+		font-weight: bold;
+		border-top:2px solid blue;
+		border-left:2px solid blue;
+		border-right:2px solid blue;
+		position: absolute;
+		top:-49px;
+		padding:12px;
+		left:-2px;
+		background: white;
+		border-top-left-radius:5px;
+		border-top-right-radius:5px;
+		text-indent:10px;
+	}
+
+	#tab-list{
+		width:15%;
+		float:left;
+		margin-top:20px;
+	}
+
+	#tab-list button{
+		border:1px solid #d4d4d4;
+		background:white;		
+		font-weight:bold;
+		font-family: "Ubuntu",sans-serif;
+		padding:12px;
+		width:80%;
+		float:left;
+		margin-bottom: 30px;
+		font-size:18px;
+		border-radius: 2px
+
+	}
+
+	#tab-content{
+		width:85%;
+		height:250px;
+		float:left;
+		padding:20px;	
+	}
+
+	#tab-content>*{
+		display: none
+	}
+
+	#tab-list button.active{
+		background:blue;
+		color:white;
+	}
+
+	.open {
+  		animation: fade 1s;
+	}
+
+	@keyframes fade{
+ 		 	0% {opacity: 0;}
+  			100% {opacity: 1;}
+	}
+
+	#create form input,#create form select,#edit input,#search form input,#search-field{
+		padding:12px;
+		border:1px solid #d4d4d4;
+		margin-bottom: 12px;
+		width:250px;
+		margin-top:8px;
+	}
+
+	#create form,#edit form,#search form{
+		font-family:"Ubuntu",sans-serif;
+	}
+
+	td,textarea{
+		border:1px solid #d4d4d4;
+		padding:10px;
+	}
+
+	textarea{
+		margin-top:8px;
+		margin-bottom:8px;
+		width:100%;
+	}
+
+	#cmp-logo{
+		float:left;	
+		box-shadow: 0px 0px 15px black;
+		width:150px;
+		height:150px;
+		border-radius:50%;
+		color: white;
+		margin-top:25px;
+	}
+
+	#cmp-name{
+		width:200px;
+		height:50px;
+		position: absolute;
+		bottom:-2px;
+		background-image:url("../../../../images/cmp_name_opp.png");
+		background-repeat: no-repeat;
+		background-position: bottom center;
+		background-size: 101% 50px;
+		color:white;
+		font-family: "Righteous";
+		font-size:20px;
+		text-align: center;
+		padding-top:12px;
+		left:0;	
+	}
+
+/* start responsive */
+	
+	@media(max-width:1024px)
+	{
+
+		#tab-list{
+			width:50%;
+			margin-left:25%;
+			margin-right:25%;
+			margin-top:6px;
+		}
+
+		#tab-list button{
+			width:100px;
+			border:none;
+			background:inherit;
+		}
+
+		#cmp-logo{
+			width:100px;
+			height:100px;
+			float:none;
+			margin:80px auto;
+		}
+
+		#cmp-name{
+			top:200px;
+			width:30%;
+			left:35%;
+			right:35%;
+		}
+
+		#app-box fieldset{
+			height:auto;
+		}
+
+		#tab-content{
+			height:auto;
+			width:100%;
+		}
+
+
+	}
+
+
+	@media(max-width:768px)
+	{
+		#tab-list{
+			width:60%;
+			margin-left:30%;
+			margin-right:10%;
+		}
+
+		#cmp-logo{
+			margin:80px 20%;
+		}
+
+		#app-box fieldset{
+			margin:0;
+		}
+	}
+/* end responsive*/
+
+#ledger-notice,#search-notice{
+	color:red;
+	font-size:50px;
+	text-align:center;
+}
+
+#delete,#save{
+	width:100%;
+	background:black;
+	color:white;
+	padding:12px;
+	border:none;
+	border-radius:4px;
+	}
